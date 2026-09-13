@@ -9,45 +9,51 @@ import seaborn as sns
 
 # Page configuration
 st.set_page_config(
-    page_title="Healthy Lifestyle Hackathon - Vaccine Adoption Predictor",
+    page_title="Vaccine Adoption Predictor - Machine Learning Dashboard",
     page_icon="💉",
     layout="wide",
     initial_sidebar_state="expanded"
 )
 
-# Custom CSS styling
+# Custom CSS styling with theme-adaptive vibrant colors
 st.markdown("""
 <style>
     .main-header {
-        font-size: 2.5rem;
-        font-weight: 700;
-        color: #1E3A8A;
+        font-size: 2.6rem;
+        font-weight: 800;
+        background: linear-gradient(90deg, #60A5FA, #3B82F6, #93C5FD);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
         text-align: center;
-        margin-bottom: 0.2rem;
+        margin-bottom: 0.3rem;
+        padding-top: 0.5rem;
     }
     .sub-header {
-        font-size: 1.2rem;
-        color: #4B5563;
+        font-size: 1.25rem;
+        color: #9CA3AF;
         text-align: center;
         margin-bottom: 2rem;
+        font-weight: 500;
     }
     .card {
-        background-color: #F3F4F6;
+        background-color: rgba(31, 41, 55, 0.5);
         padding: 1.5rem;
         border-radius: 12px;
         box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
         margin-bottom: 1rem;
+        border: 1px solid rgba(75, 85, 99, 0.3);
     }
     .metric-val {
         font-size: 2rem;
         font-weight: bold;
-        color: #2563EB;
+        color: #3B82F6;
     }
 </style>
 """, unsafe_allow_html=True)
 
-st.markdown('<div class="main-header">💉 Healthy Lifestyle Hackathon</div>', unsafe_allow_html=True)
-st.markdown('<div class="sub-header">Predictive Analytics & LightGBM Multi-Label Vaccine Adoption Classifier</div>', unsafe_allow_html=True)
+st.markdown('<div class="main-header">💉 Vaccine Adoption Predictor</div>', unsafe_allow_html=True)
+st.markdown('<div class="sub-header">Multi-Label Machine Learning & Predictive Analytics Dashboard</div>', unsafe_allow_html=True)
+
 
 # Generate sample dataset if CSV files not locally available for demo execution
 @st.cache_data
